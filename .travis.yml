@@ -1,0 +1,12 @@
+sudo: required
+
+services:
+    - docker
+
+language: C
+
+before_install:
+    - docker build -t texlive .
+
+script:
+    - docker run texlive pdflatex --version
