@@ -6,7 +6,7 @@ services:
 language: C
 
 before_install:
-    - docker build -t texlive .
+    - docker build -t texlive docker
 
 script:
     - docker run texlive pdflatex --version
